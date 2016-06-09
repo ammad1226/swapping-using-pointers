@@ -1,0 +1,30 @@
+# include <iostream>
+#include <conio.h>
+#include <stdlib.h>
+using namespace std;
+
+void swap(int *x, int *y);
+
+int main (int argc , char *argv[])
+{
+	int a = 7;
+	int b = 4;
+	cout << "Before swap the value of x =" << a << "\n";
+    cout << "Before swap the value of y =" << b << "\n"<< "\n";
+    
+    swap(&a,&b);
+    
+	cout << "after swap the value of x =" << a << "\n";
+    cout << "after swap the value of y =" << b << "\n"<< "\n";
+    system("PAUSE");
+    return 0;
+    
+}
+
+
+void swap(int *x, int *y)
+{
+	int value = *y;
+	*y = *x;
+	*x = value;
+}
